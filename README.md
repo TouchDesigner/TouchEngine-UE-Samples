@@ -3,7 +3,8 @@
 Tested against TouchDesigner 2020.24520 and UE 4.25.1.
 
 The TouchEngine plugin is referenced using a git submodule, so clone using
-git clone --recurse <gitURL>
+
+git clone --recurse gitURL
 
 Open the Level Blueprint to see the network of operations used to run TouchEngine.
 
