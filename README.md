@@ -6,6 +6,8 @@ The TouchEngine plugin is referenced using a git submodule, so clone using
 
 git clone --recurse gitURL
 
+Rebuild the map/lighting to fix the error that comes up when loading the project.
+
 Open the Level Blueprint to see the network of operations used to run TouchEngine.
 
 ***Important***
