@@ -23,3 +23,7 @@ values are applied to a light that is close to the large darker colored cube in 
 * The TOP output is just a texture of the regular displaced jellies.
 
 Inputs and outputs are referenced by the node name of the In or Out OPs.
+
+***Note ***
+
+TouchEngine takes approximately 5 seconds to load after level starts playing. 
