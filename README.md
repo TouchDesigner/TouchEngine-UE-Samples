@@ -22,6 +22,11 @@ values are applied to a light that is close to the large darker colored cube in 
 * The CHOP input is used to to scale the brightness of the 3 values coming out of the CHOP output.
 * The TOP output is just a texture of the regular displaced jellies.
 
+***Current Features***
+Currently only CHOP input and output, along with TOP output is programmed into the Plugin.
+It only works with DX11 renderer so far too. TouchEngine is ready to support other renderers as well
+as TOP input, but the Plugin does not yet expose this.
+
 Inputs and outputs are referenced by the node name of the In or Out OPs.
 
 ***Note ***
