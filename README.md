@@ -12,6 +12,12 @@ Rebuild the map/lighting to fix the error that comes up when loading the project
 
 Open the Level Blueprint to see the network of operations used to run TouchEngine.
 
+When pulling updates, don't forget to do
+
+git submodule update
+
+to get the latest TouchEngine Plugin version.
+
 ***Important***
 You will need to change the value of the Tox Path on the far left of the Level Blueprint
 to print to the correct location of UnrealSample.tox on your local machine. Relative paths
@@ -25,12 +31,14 @@ values are applied to a light that is close to the large darker colored cube in 
 * The TOP output is a texture of the regular displaced jellies, along with whatever is sent into the TOP input as the other half of the input.
 * The TOP input is combined with the output as half the image. The input currently comes from a RenderTexture that is generated on load 
 
+If errors occur the Message Log window should pop up automatically. However if it does not then you can manually open it via Windows->Developer Tools->Message Log.
+
 ***Current Features***
 Currently only CHOP input/output and TOP input/output is programmed into the Plugin.
-It only works with DX11 renderer so far. Although DX12 is partially working as well.
+It only works with DX11 renderer so far. Although DX12 is partially implemented as well.
 
 Inputs and outputs are referenced by the node name of the In or Out OPs.
 
-***Note ***
+***Note***
 
 TouchEngine takes approximately 5 seconds to load after level starts playing. 
