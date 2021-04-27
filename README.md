@@ -1,44 +1,66 @@
-# TouchEngineUE4Samp
+# UE TouchEngine Plugin Samples Repository
 
-Tested against TouchDesigner 2020.26930 and UE 4.25.1.
-2020.26930 is not available publicly as of Oct 13, 2020. Here is a direct download link:
-https://www.dropbox.com/s/us0ntegthxw33s7/TouchDesigner.2020.26930.exe?dl=0
+**Current Unreal Engine version:** `4.26.2`
 
-The TouchEngine plugin is referenced using a git submodule, so clone using
+**Current TouchEngine version:** `2021.12380`
 
-git clone --recurse gitURL
+The TouchEngine Plugin is currently supporting Parameters, CHOP input/output, TOP input/output and DAT input/output.
 
-Rebuild the map/lighting to fix the error that comes up when loading the project.
+## Getting started
+
+The TouchEngine plugin is referenced using a git submodule, clone using `git clone --recurse gitURL`
+
+When pulling updates, don't forget to do `git submodule update` to get the latest TouchEngine Plugin version.
+
+### Build plugin from repository and submodules
+
+*Scroll down to the following title if you want to use prebuilt binaries.*
+
+On your first use of the project, or if you just pulled changes from the repository it might happen that you have to recompile the plugin binaries for your own hardware. 
+
+You can execute a .bat file with the following script
+```
+call "[UE4 Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin=[Example Project Install Location]\Plugins\TouchEngine-UE4\TouchEngine.uplugin -Package=[Build Destination Location]\TouchEnigne-UE4 -Rocket
+```
+
+Or follow those stes to build from Visual Studio:
+
+1. Right click `TouchEngineUE4Samp.uproject`
+2. Click Generate `Visual Studio project files` ![Generate VS project files](ReadmePictures/ueSamples01.png?raw=true "Generate VS project files")
+3. Launch the Visual Studio Solution `TouchEngineUE4Samp.sln` in Visual Studio 2019
+4. In Visual Studio, right click the solution and click on `Rebuild solution` ![Rebuild solution](ReadmePictures/ueSamples02.png?raw=true "Rebuild solution")
+5. It could take a few minutes. Grab a cup of coffee.
+6. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.1
+
+### Use release version
+
+1. Go to the release page and download the latest zip file TODO:add link
+2. Unzip the downloaded file in `Plugins/`.
+3. A folder named TouchEngine-UE4 should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
+4. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.1
+
+## Examples
 
 Open the Level Blueprint to see the network of operations used to run TouchEngine.
 
-When pulling updates, don't forget to do
+For a detailed walkthrough of the examples, [go here](Content/README.md).
 
-git submodule update
-
-to get the latest TouchEngine Plugin version.
-
-***Important***
-You will need to change the value of the Tox Path on the far left of the Level Blueprint
-to print to the correct location of UnrealSample.tox on your local machine. Relative paths
-don't work yet in the Plugin code.
-
-The included UnrealSample.tox has 1 CHOP input, 1 CHOP output, 1 TOP output and 1 TOP input.
-
-* The CHOP output outputs 3 channels which are random noise. In the level blueprint these
-values are applied to a light that is close to the large darker colored cube in the scene.
-* The CHOP input is used to to scale the brightness of the 3 values coming out of the CHOP output.
-* The TOP output is a texture of the regular displaced jellies, along with whatever is sent into the TOP input as the other half of the input.
-* The TOP input is combined with the output as half the image. The input currently comes from a RenderTexture that is generated on load 
+## Troubleshooting
 
 If errors occur the Message Log window should pop up automatically. However if it does not then you can manually open it via Windows->Developer Tools->Message Log.
 
-***Current Features***
-Currently only CHOP input/output and TOP input/output is programmed into the Plugin.
-It only works with DX11 renderer so far. Although DX12 is partially implemented as well.
+### I am getting an error mentioning map/lighting, what should I do ?
 
-Inputs and outputs are referenced by the node name of the In or Out OPs.
+Rebuild the map/lighting to fix the error that comes up when loading the project.
 
-***Note***
+### The examples seem to load forever, what should I do ?
 
-TouchEngine takes approximately 5 seconds to load after level starts playing. 
+It can take about 5 seconds (subject to change based on hardware) for the subprocess to boot and TouchEngine to load the .tox within Unreal Engine.
+
+## Known issues
+
+TouchEngine only works with DX11 renderer so far. Although DX12 is partially implemented as well.
+
+## TouchEngine Plugin documentation
+
+This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow this link. TODO: Add link.
