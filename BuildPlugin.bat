@@ -1,1 +1,1 @@
-call "C:\Program Files (x86)\UE_4.26\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin=D:\Git\TouchEngineUE4Samp\Plugins\TouchEngine-UE4\TouchEngine.uplugin -Package=D:\Builds\TouchEnigne-UE4 -Rocket
+call "{PATH_TO_UE4_INSTALL}\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin={PATH_TO_SAMPLE_PROJECT}\TouchEngineUE4Samp\Plugins\TouchEngine-UE4\TouchEngine.uplugin -Package={PATH_TO_OUTPUT} -Rocket
