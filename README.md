@@ -34,7 +34,7 @@ Or follow those stes to build from Visual Studio:
 
 ### Use release version
 
-1. Go to the release page and download the latest zip file TODO:add link
+1. Go to the [release page](https://github.com/mbechard/TouchEngine-UE4/releases) and download the latest release zip file.
 2. Unzip the downloaded file in `Plugins/`.
 3. A folder named TouchEngine-UE4 should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
 4. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.1
@@ -44,6 +44,16 @@ Or follow those stes to build from Visual Studio:
 Open the Level Blueprint to see the network of operations used to run TouchEngine.
 
 For a detailed walkthrough of the examples, [go here](Content/README.md).
+
+## Use a specific TouchEngine version
+
+If you place any of the following, named "TouchEngine", alongside the .tox you're opening, it will use that version
+
+- a Windows .lnk to a TouchDesigner installation
+- a symlink to a TouchDesigner installation
+- a full TouchDesigner installation
+
+If none of those option is present, it will load the latest TouchEngine version installed on your system.
 
 ## Troubleshooting
 
@@ -63,4 +73,4 @@ TouchEngine only works with DX11 renderer so far. Although DX12 is partially imp
 
 ## TouchEngine Plugin documentation
 
-This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow this link. TODO: Add link.
+This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow [this link](https://github.com/mbechard/TouchEngine-UE4/).
