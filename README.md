@@ -59,6 +59,10 @@ If none of those option is present, it will load the latest TouchEngine version 
 
 If errors occur the Message Log window should pop up automatically. However if it does not then you can manually open it via Windows->Developer Tools->Message Log.
 
+### The Unreal related options are misssing from the context menu when right clicking the Unreal project file, what should I do ?
+
+This seems to be an install bug, we encountered it on our end as well. With luck, the Epic Games Launcher will shop up with a message mentioning to "Fix the project files", clicking "Fix now" should solve the issue. If the message doesn't show up, another solution is to open your project using right click -> Open with... and open the project with the `UnrealVersionSelector.exe` located in your Epic Games Launcher install folder (by default, `C:\Program Files (x86)\Epic Games\Launcher\Engine\Binaries\Win64`)
+
 ### I am getting an error mentioning map/lighting, what should I do ?
 
 Rebuild the map/lighting to fix the error that comes up when loading the project.
