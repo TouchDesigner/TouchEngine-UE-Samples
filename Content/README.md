@@ -223,6 +223,30 @@ The Resolution parameter is used to specify the length of multiple pattern CHOPs
 
 TODO: To be completed
 
+## 02bis RGB Light
+
+Tox path and name: `Content\TDToxFiles\UESample02_SimpleTexture.tox`
+
+This simple example showcase how multiple engine can load the same .tox file for different purposes or end results. In this example, the user can drive the brightness of a light using the engine input `chop_rgbBrightness`. The output `chop_rgbOut` with 3 channels (R, G, B) of 1 sample each is being used to drive the light color output.
+
+### Parameters, inputs, outputs
+
+#### Parameters
+See 02 SimpleTexture section.
+
+#### Inputs
+See 02 SimpleTexture section.
+
+#### Outputs
+See 02 SimpleTexture section.
+
+### .tox file
+See 02 SimpleTexture section.
+
+### Blueprint, UE dataflow and specifics
+
+TODO: To be completed
+
 ## 08 SpringData
 
 Tox path and name: `Content\TDToxFiles\UESample08_SpringData.tox`
