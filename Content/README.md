@@ -6,9 +6,9 @@ All .tox files can be found in `TDToxFiles`.
 
 Tox path and name: `Content\TDToxFiles\UESample01_EnginePerform.tox`
 
-This simple example showcase how to stream a texture from TouchEngine and apply it in an Unreal Engine material.
+This example is showcasing how to load an Engine Component. The second part of the example is using the same base .tox file and loading in different sync modes.
 
-It is also handy to see how the TouchEngine is running in its own thread has it is outputting all the data available with a Perform CHOP.
+It is also handy to see how the TouchEngine is running in its own thread has it is outputting all the data available with a Perform CHOP. Additonally, a pulsing circle is being driven by a Beat CHOP, as well as the current frame and absolute frame of the Timeline CHOP being passed to the final TOP output.
 
 ![TOX](ReadmePictures/01_EnginePerform_01.png?raw=true "EnginePerform .tox content.")
 
@@ -34,13 +34,116 @@ Self explenatory. See comments of previous sections.
 
 TODO: To be completed
 
-## 04 SingleSampleChannels
+## 02 SimpleTexture
 
-Tox path and name: `Content\TDToxFiles\UESample04_SingleSampleChannels.tox`
+Tox path and name: `Content\TDToxFiles\UESample02_SimpleTexture.tox`
+
+This simple example showcase how to stream a texture from TouchEngine and apply it in an Unreal Engine material. A similar approach is showcased in the example EnginePerform where we are applying the text
+
+![TOX](ReadmePictures/02_SimpleTexture_01.png?raw=true "SimpleTexture .tox content.")
+
+### Parameters, inputs, outputs
+
+#### Parameters
+- Name
+
+#### Inputs
+- chop_rgbBrightness
+- top_textureIn
+
+In this example, the first input chop_rgbBrithness is not used. It is here to showcase that a .tox can be loaded multiple times in different engines. You will see it being used in the Simple RGB Light example.
+
+The second input can be used from within Unreal Engine to replace the jellybeans default texture by an Unreal Engine texture. It will then be displaced like in the traditional and default TouchDesigner project.
+
+#### Outputs
+- chop_rgbOut - RGB channels following a sinewave. They can be "dimmed" using the chop_rgbBrightness input. They are not used in this example (see previous section for details).
+- top_textureOut - The displaced default jellybeans texture or an Unreal Engine texture assgined by the user.
+
+### .tox file
+Self explenatory. See comments of previous sections.
+
+### Blueprint, UE dataflow and specifics
+
+TODO: To be completed
+
+## 03 Parameters
+
+Tox path and name: `Content\TDToxFiles\UESample03_Parameters.tox`
+
+This example showcase how to get or set all parameters type of TouchDesigner / TouchEngine within an Unreal Engine blueprint. There is no specific interactivity available here, but we advise users to focus on the blueprint file to understand the process behind each parameter get / set. Additionally, it covers all inputs / outputs type, but they are only passthrough without particular data processing.
+
+### Parameters, inputs, outputs
+
+#### Parameters
+- Filepath
+- Folderpath
+- Header
+- Position
+- Colour
+- Size
+- Uvw
+- Float
+- String
+- Int
+- Intmenu
+- Stringmenu
+- Anotherheader
+- Toggle
+- Pulse
+- Momentary
+- Threeints
+
+#### Inputs
+- chop_in1
+- dat_in1
+- top_in1
+
+#### Outputs
+- chop_out1
+- dat_out1
+- top_out1
+
+### .tox file
+Self explenatory. See comments of previous sections.
+
+### Blueprint, UE dataflow and specifics
+
+TODO: To be completed
+
+## 04 SimpleBlendCubeTexture
+
+Tox path and name: `Content\TDToxFiles\UESample04_SimpleBlendCubeTexture.tox`
+
+This example showcase the use of multiple TOP inputs and some simple TOP compositing (blend) between a TOP A and a TOP B. Use the Blend parameter to modify the blend factor.
+
+![TOX](ReadmePictures/04_SimpleBlendCubeTexture_01.png?raw=true "SimpleBlendCubeTexture .tox content.")
+
+### Parameters, inputs, outputs
+
+#### Parameters
+- Blend (Float Par)
+
+#### Inputs
+ - top_texA - by default using the traditional TouchDesigner banana. You can assign a texture in Unreal Engine after loading the .tox file. Texture can only be of an Unreal-friendly compression type. More details below.
+ - top_texB - by default using the TouchDesigner cubemap / UV grid. You can assign a texture in Unreal Engine after loading the .tox file. Texture can only be of an Unreal-friendly compression type. More details below.
+ - 
+#### Outputs
+- top_blendedTexture - the result of the blend
+
+### .tox file
+Self explenatory. See comments of previous sections.
+
+### Blueprint, UE dataflow and specifics
+
+TODO: To be completed
+
+## 05 SingleSampleChannels
+
+Tox path and name: `Content\TDToxFiles\UESample05_SingleSampleChannels.tox`
 
 This simple example showcase the use of multiple channels of CHOP data with one sample per channel.
 
-![TOX](ReadmePictures/04_SingleSampleChannels_01.png?raw=true "SingleSampleChannels .tox content.")
+![TOX](ReadmePictures/05_SingleSampleChannels_01.png?raw=true "SingleSampleChannels .tox content.")
 
 ### Parameters, inputs, outputs
 
@@ -62,13 +165,13 @@ Self explenatory. See comments of previous sections.
 
 TODO: To be completed
 
-## 05 PulseGenerateRandomPositions
+## 06 PulseGenerateRandomPositions
 
-Tox path and name: `Content\TDToxFiles\UESample05_PulseGenerateRandomPositions.tox`
+Tox path and name: `Content\TDToxFiles\UESample06_PulseGenerateRandomPositions.tox`
 
 This example showcase the use of multiple channels of CHOP data with 100 samples per channel. The channels being outputted are tx, ty, tz. Using the Generate pulse parameter will generate a new data set. The change between data sets pre / post pulse is smoothed over 1 second with a filter CHOP.
 
-![TOX](ReadmePictures/05_PulseGenerateRandomPositions_01.png?raw=true "PulseGenerateRandomPositions .tox content.")
+![TOX](ReadmePictures/06_PulseGenerateRandomPositions_01.png?raw=true "PulseGenerateRandomPositions .tox content.")
 
 ### Parameters, inputs, outputs
 
@@ -90,13 +193,13 @@ Self explenatory. See comments of previous sections.
 
 TODO: To be completed
 
-## 06 PulseGenerateRandomPath
+## 07 PulseGenerateRandomPath
 
-Tox path and name: `Content\TDToxFiles\UESample06_PulseGenerateRandomPath.tox`
+Tox path and name: `Content\TDToxFiles\UESample07_PulseGenerateRandomPath.tox`
 
 This example showcase the use of multiple channels of CHOP data with X samples per channel. X being the value set with the Resolution parameter. The channels being outputted are tx, ty, tz. Using the Generate pulse parameter will generate a new data set. The change between data sets pre / post pulse is smoothed over 1 second with a filter CHOP.
 
-![TOX](ReadmePictures/06_PulseGenerateRandomPath_01.png?raw=true "PulseGenerateRandomPath .tox content.")
+![TOX](ReadmePictures/07_PulseGenerateRandomPath_01.png?raw=true "PulseGenerateRandomPath .tox content.")
 
 ### Parameters, inputs, outputs
 
@@ -120,25 +223,28 @@ The Resolution parameter is used to specify the length of multiple pattern CHOPs
 
 TODO: To be completed
 
-## 07 SimpleBlendCubeTexture
+## 08 SpringData
 
-Tox path and name: `Content\TDToxFiles\UESample07_SimpleBlendCubeTexture.tox`
+Tox path and name: `Content\TDToxFiles\UESample08_SpringData.tox`
 
-This example showcase the use of multiple TOP inputs and some simple TOP compositing (blend) between a TOP A and a TOP B. Use the Blend parameter to modify the blend factor.
+This CHOP data example is based on one of the Spring CHOP snippets available from within TouchDesigner. A trigger (Spring Trigger - Pulse Par) and various parameters related to the Spring CHOP are exposed at the top level. Additionally, an input CHOP can also be used to trigger the spring / rebound effect.
 
-![TOX](ReadmePictures/07_SimpleBlendCubeTexture_01.png?raw=true "SimpleBlendCubeTexture .tox content.")
+![TOX](ReadmePictures/08_SpringData_01.png?raw=true "SpringData .tox content.")
 
 ### Parameters, inputs, outputs
 
 #### Parameters
-- Blend (Float Par)
+See [Derivative.ca wiki documentation](https://docs.derivative.ca/Spring_CHOP).
+
+At runtime and in realtime, the user can update the parameters to have an impact on the system. 
 
 #### Inputs
- - top_texA - by default using the traditional TouchDesigner banana. You can assign a texture in Unreal Engine after loading the .tox file. Texture can only be of an Unreal-friendly compression type. More details below.
- - top_texB - by default using the TouchDesigner cubemap / UV grid. You can assign a texture in Unreal Engine after loading the .tox file. Texture can only be of an Unreal-friendly compression type. More details below.
- - 
+- input_chopSpringTrigger - this input is binded to the right red button in the example project. Shooting on that button will pass a value going from 0 to 1 as CHOP data.
+
 #### Outputs
-- top_blendedTexture - the result of the blend
+- chop_springTriggerValue
+
+In this example, chop_springTriggerValue is being used to drive the positions of a sphere on its height.
 
 ### .tox file
 Self explenatory. See comments of previous sections.
@@ -147,13 +253,13 @@ Self explenatory. See comments of previous sections.
 
 TODO: To be completed
 
-## 08 PointGenerator
+## 09 PointGenerator
 
-Tox path and name: `Content\TDToxFiles\UESample08_PointGenerator.tox`
+Tox path and name: `Content\TDToxFiles\UESample09_PointGenerator.tox`
 
 This more advanced example showcase the use of the Palette's pointGenerator to generate positions for X points where X is the value set using the Num Points parameter. For details about the pointGenerator, go to the following [page](https://docs.derivative.ca/Palette:pointGenerator).
 
-![TOX](ReadmePictures/08_PointGenerator_01.png?raw=true "SimpleBlendCubeTexture .tox content.")
+![TOX](ReadmePictures/09_PointGenerator_01.png?raw=true "PointGenerator .tox content.")
 
 ### Parameters, inputs, outputs
 
@@ -173,36 +279,6 @@ In this example, top_pointData (TODO: Example to be fixed) is being used to driv
 
 ### .tox file
 See pointGenerator wiki documentation for details. The .tox file is really just wrapping the palette component.
-
-### Blueprint, UE dataflow and specifics
-
-TODO: To be completed
-
-## 09 SpringData
-
-Tox path and name: `Content\TDToxFiles\UESample09_SpringData.tox`
-
-This CHOP data example is based on one of the Spring CHOP snippets available from within TouchDesigner. A trigger (Spring Trigger - Pulse Par) and various parameters related to the Spring CHOP are exposed at the top level. Additionally, an input CHOP can also be used to trigger the spring / rebound effect.
-
-![TOX](ReadmePictures/09_SpringData_01.png?raw=true "SpringData .tox content.")
-
-### Parameters, inputs, outputs
-
-#### Parameters
-See [Derivative.ca wiki documentation](https://docs.derivative.ca/Spring_CHOP).
-
-At runtime and in realtime, the user can update the parameters to have an impact on the system. 
-
-#### Inputs
-- input_chopSpringTrigger - this input is binded to the right red button in the example project. Shooting on that button will pass a value going from 0 to 1 as CHOP data.
-
-#### Outputs
-- chop_springTriggerValue
-
-In this example, chop_springTriggerValue is being used to drive the positions of a sphere on its height.
-
-### .tox file
-Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
@@ -270,19 +346,3 @@ TODO: To be completed
 ### Blueprint, UE dataflow and specifics
 
 TODO: To be completed -->
-
-## 01 UnrealSample
-
-### Parameters, inputs, outputs
-
-The included UnrealSample.tox has 1 CHOP input, 1 CHOP output, 1 TOP output and 1 TOP input.
-
-### .tox file
-
-* The CHOP output outputs 3 channels which are random noise. In the level blueprint these
-values are applied to a light that is close to the large darker colored cube in the scene.
-* The CHOP input is used to to scale the brightness of the 3 values coming out of the CHOP output.
-* The TOP output is a texture of the regular displaced jellies, along with whatever is sent into the TOP input as the other half of the input.
-* The TOP input is combined with the output as half the image. The input currently comes from a RenderTexture that is generated on load
-
-### Blueprint, UE dataflow and specifics
