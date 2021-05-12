@@ -55,6 +55,8 @@ If you place any of the following, named "TouchEngine", alongside the .tox you'r
 
 If none of those option is present, it will load the latest TouchEngine version installed on your system.
 
+The Unreal Engine Plugin library will look for one of those shortcuts when loading the Engine and .tox file using a TouchEngineComponent object.
+
 ## Troubleshooting
 
 If errors occur the Message Log window should pop up automatically. However if it does not then you can manually open it via Windows->Developer Tools->Message Log.
