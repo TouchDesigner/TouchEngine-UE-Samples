@@ -56,6 +56,15 @@ Clicking Edit BP_TE_[example name] brings up the blueprint editing view in a new
 
 You can see in this blueprint example that we are fetching the output of the loaded TouchEngine component using Get TouchEngine Output and by setting the output name o/top_performData. Once fetched, the TOP (in TouchDesigner slang) or Texture Object Reference (in Unreal Engine slang) is applied to a Dynamic Material using Set Texture Parameter Value. The result, in Play Mode in the World View, is a plane with a texture applied. The texture is the TOP output of the .tox file described in the sections above.
 
+### A note about BP_ToggleButton_Loader
+
+Note how in the World Outliner and in every sample, there is an object called ToggleButton_Loader using the blueprint BP_ToggleButton_Loader. This simple blueprint is used to trigger the load of the TouchEngine Component and .tox file within the TouchEngine.
+
+In the second part of this example, showcasing Cook Modes, the same object is used and referencing multiple instances of the same EnginePeform blueprint, with different Cook Modes set.
+
+![TOX](ReadmePictures/01_EnginePerform_06.png?raw=true "EnginePerform ToggleButton loader details panel.")
+
+
 ## 02 SimpleTexture
 
 Tox path and name: `Content\TDToxFiles\UESample02_SimpleTexture.tox`
@@ -86,7 +95,14 @@ Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+This example is getting a texture out of the TouchEngine and applying it to a cube, using the nodes Get TouchEngine Output (to get the TOP out of the TouchEngine) and Set Texture Parameter Value to set the texture on the cube.
+
+The main difference here is that you can also pass a texture from Unreal Engine to TouchEngine, using Set TouchEngine Input. Any texture passed using this node will be used just like any COMP TOP input in TouchEngine.
+
+You can do anything you wish with it from within the TouchEngine process / .tox file, and output it again back to Unreal Engine.
+
+![TOX](ReadmePictures/02_SimpleTexture_02.png?raw=true "SimpleTexture setting TOP input from Unreal to TouchEngine.")
+
 
 ## 03 Parameters
 
@@ -130,7 +146,7 @@ Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+From the World Outliner, click on edit blueprint to access to the blueprint. It showcase how to read / write all parameter types and should be self explanatory.
 
 ## 04 SimpleBlendCubeTexture
 
@@ -157,7 +173,10 @@ Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+This example showcase Unreal Engine nodes that you are already familiar with by now. It's showcasing how to change the value of a parameter (type float in that case) using Set TouchEngine Input. In this example, the interaction is triggered when you shoot at the arrows on the sides of the box. It will increase or decrease the value passed in the Blend parameter. You can pass as well Unreal Engine textures which will replace the default (Banana and UV board) textures.
+
+![TOX](ReadmePictures/04_SimpleBlendCubeTexture_02.png?raw=true "SimpleBlendCubeTexture Slider button left and right arrow interaction and setting parameter in blueprint.")
+
 
 ## 05 SingleSampleChannels
 
@@ -185,7 +204,7 @@ Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+TODO: To be completed w/ details on CHOP datastructure in UE
 
 ## 06 PulseGenerateRandomPositions
 
@@ -213,7 +232,11 @@ Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+TODO: To be completed w/ details on CHOP datastructure in UE
+
+Similar to the previous examples with the side arrows, this example is briefly setting a Pulse parameter on the hit event using Set TouchEngine Input. The pulse generates new positions withing the TouchEngine / .tox loaded and Unreal Engine reads those values back using Get TouchEngine Output.
+
+![TOX](ReadmePictures/06_PulseGenerateRandomPositions_02.png?raw=true "PulseGenerateRandomPositions set Pulse Par from Unreal Engine blueprint.")
 
 ## 07 PulseGenerateRandomPath
 
@@ -243,7 +266,7 @@ The Resolution parameter is used to specify the length of multiple pattern CHOPs
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+TODO: To be completed w/ details on CHOP datastructure in UE
 
 ## 02bis RGB Light
 
@@ -297,7 +320,9 @@ Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+Similar to the Pulse button, this example is using one button where CHOP data is briefly set from 0 to 1 and passed to TouchEngine, while the other is setting a Pulse parameter. The effect on the visual elements is the same (it triggers the motion of the sphere). 
+
+![TOX](ReadmePictures/08_SpringData_02.png?raw=true "SpringData .tox content.")
 
 ## 09 PointGenerator
 
@@ -328,7 +353,7 @@ See pointGenerator wiki documentation for details. The .tox file is really just 
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+TODO: To be completed w/ details on reading pixel data and converting to positions / floats
 
 ## 10 SimpleScoring
 
@@ -362,7 +387,15 @@ A simple scoring system relying on a mostly DAT network and Parameter Execute ca
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+This example relies heavily on the details panel.
+
+![TOX](ReadmePictures/10_SimpleScoring_02.png?raw=true "SimpleScoring .tox content.")
+
+When shooting the button, the Send parameter (Pulse type) is briefly set to 1 and the .tox file loaded in the TouchEngine Component will do the work based on all the other parameters of the details panel.
+
+After which, the blueprint is reading the DAT output using Get TouchEngine Output (o/dat_sortedDescScore) and calling the Set Score Text blueprint function.
+
+![TOX](ReadmePictures/10_SimpleScoring_03.png?raw=true "SimpleScoring Set Score Text function in Unreal Engine blueprint.")
 
 <!-- ## 00 TEMPLATE NAME
 
