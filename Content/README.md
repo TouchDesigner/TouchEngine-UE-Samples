@@ -2,6 +2,10 @@
 
 All .tox files can be found in `TDToxFiles`.
 
+## A word about blueprints and UE project file
+
+When cloning the repository and opening the project for the first time, pay attention to the World Outliner on the right. The World Outliner is carefully organized and objects are named so that you can easily connect the dots between .tox file and blueprints. In the following documentation, only the first sample will have its blueprint extensively documented, the following examples will cover specific bits that are specific to the example covered in that section.
+
 ## 01 EnginePerform
 
 Tox path and name: `Content\TDToxFiles\UESample01_EnginePerform.tox`
@@ -32,7 +36,25 @@ Self explenatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+You can easily access the blueprint in the World Outliner.
+
+![TOX](ReadmePictures/01_EnginePerform_02.png?raw=true "EnginePerform in World Outliner.")
+
+Each world object prefixed BP_TE_ is the blueprint where a TouchEngine Component is being used to load the example .tox file.
+
+You can either click directly Edit BP_TE_[example name] or click the object and look for the details panel underneath.
+
+![TOX](ReadmePictures/01_EnginePerform_03.png?raw=true "EnginePerform BP_TE_ in Details Panel.")
+
+You will find in the components section of the details panel the TouchEngine Component, with all the parameters of the .tox file loaded being exposed, as well as inputs (CHOPs, DATs, TOPs) and outputs.
+
+![TOX](ReadmePictures/01_EnginePerform_04.png?raw=true "EnginePerform TouchEngine component details in Details Panel.")
+
+Clicking Edit BP_TE_[example name] brings up the blueprint editing view in a new window. In this window, you can find the same objects that makes the blueprint and were visible in the details panel. Clicking the TouchEngine Component brings the TouchEngine settings in the details panel, as well as parameters, inputs and outputs.
+
+![TOX](ReadmePictures/01_EnginePerform_05.png?raw=true "EnginePerform blueprint editing window view.")
+
+You can see in this blueprint example that we are fetching the output of the loaded TouchEngine component using Get TouchEngine Output and by setting the output name o/top_performData. Once fetched, the TOP (in TouchDesigner slang) or Texture Object Reference (in Unreal Engine slang) is applied to a Dynamic Material using Set Texture Parameter Value. The result, in Play Mode in the World View, is a plane with a texture applied. The texture is the TOP output of the .tox file described in the sections above.
 
 ## 02 SimpleTexture
 
