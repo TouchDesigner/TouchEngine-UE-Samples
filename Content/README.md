@@ -203,7 +203,9 @@ Self explanatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed w/ details on CHOP datastructure in UE
+This example introduce CHOPs in UE blueprints. You can see from the screenshot below or directly in the blueprint event graph that Get TouchEngine Output will pass to the blueprint a CHOP object. In this case, the 1024 channels of 1 sample each are used to drive the distance between the center of our "shape" and all the satellites.
+
+![TOX](ReadmePictures/05_SingleSampleChannels_02.png?raw=true "Introducing CHOP objects in UE blueprints.")
 
 ## 06 PulseGenerateRandomPositions
 
@@ -231,11 +233,18 @@ Self explanatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed w/ details on CHOP datastructure in UE
-
 Similar to the previous examples with the side arrows, this example is briefly setting a Pulse parameter on the hit event using Set TouchEngine Input. The pulse generates new positions within the TouchEngine / .tox loaded and Unreal Engine reads those values back using Get TouchEngine Output.
 
 ![TOX](ReadmePictures/06_PulseGenerateRandomPositions_02.png?raw=true "PulseGenerateRandomPositions set Pulse Par from Unreal Engine blueprint.")
+
+A CHOP object is returned from Get TouchEngine Output. This CHOP object is passed to Fill Pos Array to be parsed and prepared in an Unreal Engine friendly format: an array of vectors. 
+
+![TOX](ReadmePictures/06_PulseGenerateRandomPositions_03.png?raw=true "PulseGenerateRandomPositions set Pulse Par from Unreal Engine blueprint.")
+
+In the following screenshot you can see that the Get Channel function can be used to retrieve a specific channel by its index.
+
+![TOX](ReadmePictures/06_PulseGenerateRandomPositions_04.png?raw=true "PulseGenerateRandomPositions set Pulse Par from Unreal Engine blueprint.")
+
 
 ## 07 PulseGenerateRandomPath
 
@@ -265,7 +274,7 @@ The Resolution parameter is used to specify the length of multiple pattern CHOPs
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed w/ details on CHOP datastructure in UE
+Similar to the two previous examples.
 
 ## 02bis RGB Light
 
@@ -289,7 +298,7 @@ See 02 SimpleTexture section.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed
+TODO: Add blueprint when example is updated to pass brightness toggles / modifier.
 
 ## 08 SpringData
 
@@ -350,7 +359,11 @@ See pointGenerator wiki documentation for details. The .tox file is really just 
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed w/ details on reading pixel data and converting to positions / floats
+TODO: To be completed w/ details on reading pixel data and converting to positions / floats (currently using CHOP data)
+
+![TOX](ReadmePictures/09_PointGenerator_02.png?raw=true "Get CHOP before preparing data, passing data to satellites.")
+
+![TOX](ReadmePictures/09_PointGenerator_03.png?raw=true "Parse CHOP data and ingest for Unreal friendly positions")
 
 ## 10 SimpleScoring
 
