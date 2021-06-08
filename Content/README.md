@@ -100,7 +100,7 @@ The main difference here is that you can also pass a texture from Unreal Engine 
 
 You can do anything you wish with it from within the TouchEngine process / .tox file, and output it again back to Unreal Engine.
 
-![TOX](ReadmePictures/02_SimpleTexture_02.png?raw=true "SimpleTexture setting TOP input from Unreal to TouchEngine.")
+![BP](ReadmePictures/02_SimpleTexture_02.png?raw=true "SimpleTexture setting TOP input from Unreal to TouchEngine.")
 
 
 ## 03 Parameters
@@ -147,6 +147,9 @@ Self explanatory. See comments of previous sections.
 
 From the World Outliner, click on edit blueprint to access to the blueprint. It showcases how to read / write all parameter types and should be self explanatory.
 
+![BP](ReadmePictures/03_Parameters_BP_Overall.png?raw=true "Parameters usage example in Parameters Blueprint")
+
+
 ## 04 SimpleBlendCubeTexture
 
 Tox path and name: `Content\TDToxFiles\UESample04_SimpleBlendCubeTexture.tox`
@@ -172,10 +175,10 @@ Self explanatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-This example showcases Unreal Engine nodes that you are already familiar with by now. It's showcasing how to change the value of a parameter (type float in that case) using Set TouchEngine Input. In this example, the interaction is triggered when you shoot at the arrows on the sides of the box. It will increase or decrease the value passed to the Blend parameter. You can also use Unreal Engine textures which will replace the default (Banana and UV board) textures.
+This example showcases Unreal Engine nodes that you are already familiar with by now. It's showcasing how to change the value of a parameter (type float in that case) using Set TouchEngine Input (from Update Blend Value). In this example, the interaction is triggered when you shoot at the arrows on the sides of the box. It will increase or decrease the value passed to the Blend parameter. You can also use Unreal Engine textures which will replace the default (Banana and UV board) textures.
 
 ![TOX](ReadmePictures/04_SimpleBlendCubeTexture_02.png?raw=true "SimpleBlendCubeTexture Slider button left and right arrow interaction and setting parameter in blueprint.")
-
+![TOX](ReadmePictures/04_SimpleBlendCubeTexture_02bis_UpdateBlendValue.png?raw=true "SimpleBlendCubeTexture Slider button left and right arrow interaction and setting parameter in blueprint.")
 
 ## 05 SingleSampleChannels
 
@@ -298,7 +301,9 @@ See 02 SimpleTexture section.
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: Add blueprint when example is updated to pass brightness toggles / modifier.
+![BP](ReadmePictures/02_SimpleTexture_RGB_GetChannelByName_01.png?raw=true "You can also get a channel by its name.")
+
+This example showcase how to access a CHOP channel by its name using Get Channel by Name.
 
 ## 08 SpringData
 
