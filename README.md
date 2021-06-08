@@ -85,6 +85,10 @@ It can take about 5 seconds (subject to change based on hardware) for the subpro
 
 TouchEngine only works with DX11 renderer so far. Although DX12 is partially implemented as well.
 
+## Current limitations
+
+TO BE COMPLETED
+
 ## TouchEngine Plugin documentation
 
 This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow [this link](https://github.com/mbechard/TouchEngine-UE4/).
