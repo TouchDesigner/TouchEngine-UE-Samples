@@ -102,6 +102,9 @@ You can do anything you wish with it from within the TouchEngine process / .tox 
 
 ![BP](ReadmePictures/02_SimpleTexture_02.png?raw=true "SimpleTexture setting TOP input from Unreal to TouchEngine.")
 
+### A word about texture type, depth and limitations
+
+TO BE COMPLETED
 
 ## 03 Parameters
 
