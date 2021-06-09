@@ -83,7 +83,7 @@ It can take about 5 seconds (subject to change based on hardware) for the subpro
 
 ### I just pulled the git repository and got some updates, my project is now starting with a lot of errors, what should I do ?
 
-If you had compiled the plugin manually, chances are that it is now using an older version of the plugin with potential new features in the Unreal Engine project. You can either grab the latest plugin version on our release page in the plugin repository, or re-compile manually the plugin.
+If you had compiled the plugin manually, chances are that it is now using an older version of the plugin while they are potentially new features in the Unreal Engine project. You can either grab the latest plugin version on our release page in the plugin repository, or re-compile manually the plugin.
 
 If you don't use Visual Studio, delete the binaries from `Plugins\TouchEngine-UE4\Binaries\Win64` and Unreal Engine should re-compile the plugin for you at startup.
 
