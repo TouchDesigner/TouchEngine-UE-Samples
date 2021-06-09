@@ -106,7 +106,9 @@ You can do anything you wish with it from within the TouchEngine process / .tox 
 
 ### A word about texture type, depth and limitations
 
-When importing textures (assets) in Unreal Engine, there is high chances that the default type automaticly set by UE will not be compatible with TouchEngine. You'll want to make sur your asset is in VectorDisplacementmap mode (RGBA8, 8bits) or HDR mode (RGB, no sRGB, 32bits) or Displacementmap mode (8/16bits).
+When importing textures (assets) in Unreal Engine, there is high chances that the default type automatically set by UE will not be compatible with TouchEngine. You'll want to make sur your asset is in VectorDisplacementmap mode (RGBA8, 8bits) or HDR mode (RGB, no sRGB, 32bits). Uncompressed textures should all work. Please open an issue on Github and share your texture file in a .zip if you encounter issues with a specific file.
+
+Accessing a TouchEngine Component TOP output should always work and be converted to the appropriate texture type in the Unreal blueprint.
 
 ## 03 Parameters
 
