@@ -91,13 +91,9 @@ If you don't use Visual Studio, delete the binaries from `Plugins\TouchEngine-UE
 
 When Unreal is started and the TouchEngine plugin is loaded, it is normal to occasionally see instances of TouchEngine appear in your task manager even if you didn't hit Play in your Unreal Engine project. If a crash occurs, it can happen that some TouchEngine processes are still running, in which case you should terminate them.
 
-## Known issues
+## Known issues and current limitations
 
 TouchEngine only works with DX11 renderer so far. Although DX12 is partially implemented as well.
-
-## Current limitations
-
-TO BE COMPLETED
 
 ## TouchEngine Plugin documentation
 
