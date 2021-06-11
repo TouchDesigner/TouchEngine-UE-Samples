@@ -64,6 +64,8 @@ The second part of this example showcases Cook Modes. The same object is used an
 
 ![TOX](ReadmePictures/01_EnginePerform_06.png?raw=true "EnginePerform ToggleButton loader details panel.")
 
+Notice the property `Send Mode` on the TouchEngine Component. There are 2 send modes, Every Frame and On Access. Every Frame sets and gets outputs every frame, while on access only sends them when the variable types are accessed via the blueprint nodes.
+
 ## 02 SimpleTexture
 
 Tox path and name: `Content\TDToxFiles\UESample02_SimpleTexture.tox`
@@ -104,7 +106,9 @@ You can do anything you wish with it from within the TouchEngine process / .tox 
 
 ### A word about texture type, depth and limitations
 
-TO BE COMPLETED
+When importing textures (assets) in Unreal Engine, there is high chances that the default type automatically set by UE will not be compatible with TouchEngine. You'll want to make sur your asset is in VectorDisplacementmap mode (RGBA8, 8bits) or HDR mode (RGB, no sRGB, 32bits). Uncompressed textures should all work. Please open an issue on Github and share your texture file in a .zip if you encounter issues with a specific file.
+
+Accessing a TouchEngine Component TOP output should always work and be converted to the appropriate texture type in the Unreal blueprint.
 
 ## 03 Parameters
 
@@ -212,6 +216,8 @@ Self explanatory. See comments of previous sections.
 This example introduce CHOPs in UE blueprints. You can see from the screenshot below or directly in the blueprint event graph that Get TouchEngine Output will pass to the blueprint a CHOP object. In this case, the 1024 channels of 1 sample each are used to drive the distance between the center of our "shape" and all the satellites.
 
 ![TOX](ReadmePictures/05_SingleSampleChannels_02.png?raw=true "Introducing CHOP objects in UE blueprints.")
+
+Lastly, the gathered data is being passed to BP_OrbiterCubes and its Set Satellite Distances function where instances are being created and transforms set. The approach is identical in example 06, 07 and 09. 09 Will be updated at a later date to use 32bits texture data.
 
 ## 06 PulseGenerateRandomPositions
 
@@ -367,7 +373,7 @@ See pointGenerator wiki documentation for details. The .tox file is really just 
 
 ### Blueprint, UE dataflow and specifics
 
-TODO: To be completed w/ details on reading pixel data and converting to positions / floats (currently using CHOP data)
+Currently, the approach is similar to example 07. The difference is in the amount of parameters being used, fetched from and being passed back to the TouchEngine. 09 Will be updated at a later date to use 32bits texture data.
 
 ![TOX](ReadmePictures/09_PointGenerator_02.png?raw=true "Get CHOP before preparing data, passing data to satellites.")
 

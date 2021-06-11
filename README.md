@@ -81,13 +81,19 @@ Rebuild the map/lighting to fix the error that comes up when loading the project
 
 It can take about 5 seconds (subject to change based on hardware) for the subprocess to boot and TouchEngine to load the .tox within Unreal Engine.
 
-## Known issues
+### I just pulled the git repository and got some updates, my project is now starting with a lot of errors, what should I do ?
+
+If you had compiled the plugin manually, chances are that it is now using an older version of the plugin while they are potentially new features in the Unreal Engine project. You can either grab the latest plugin version on our release page in the plugin repository, or re-compile manually the plugin.
+
+If you don't use Visual Studio, delete the binaries from `Plugins\TouchEngine-UE4\Binaries\Win64` and Unreal Engine should re-compile the plugin for you at startup.
+
+### I see multiple TouchEngine.exe processes in my task manager while nothing is running, what should I do ?
+
+When Unreal is started and the TouchEngine plugin is loaded, it is normal to occasionally see instances of TouchEngine appear in your task manager even if you didn't hit Play in your Unreal Engine project. If a crash occurs, it can happen that some TouchEngine processes are still running, in which case you should terminate them.
+
+## Known issues and current limitations
 
 TouchEngine only works with DX11 renderer so far. Although DX12 is partially implemented as well.
-
-## Current limitations
-
-TO BE COMPLETED
 
 ## TouchEngine Plugin documentation
 
