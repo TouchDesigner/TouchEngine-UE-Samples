@@ -1,3 +1,3 @@
 [submodule "Plugins/TouchEngine-UE4"]
 	path = Plugins/TouchEngine-UE4
-	url = git@github.com:mbechard/TouchEngine-UE4.git
+	url = git@github.com:TouchDesigner/TouchEngine-UE4.git
