@@ -99,8 +99,6 @@ When Unreal is started and the TouchEngine plugin is loaded, it is normal to occ
 
 ## Known issues and current limitations
 
-TouchEngine only works with DX11 renderer so far. Although DX12 is partially implemented as well.
-
 ## TouchEngine Plugin documentation
 
 This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow [this link](https://github.com/TouchDesigner/TouchEngine-UE4/).
