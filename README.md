@@ -1,4 +1,4 @@
-# UE TouchEngine Plugin Samples Repository
+# TouchEngine-UE4 Plugin Samples Repository
 
 **Current Unreal Engine version:** `4.26.2`
 
