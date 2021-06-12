@@ -101,4 +101,4 @@ When Unreal is started and the TouchEngine plugin is loaded, it is normal to occ
 
 ## TouchEngine-UE4 Plugin documentation
 
-This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow [this link](https://github.com/TouchDesigner/TouchEngine-UE4/).
+This repository is covering the sample project and examples, for a complete documentation of the TouchEngine-UE4 Plugin, follow [this link](https://github.com/TouchDesigner/TouchEngine-UE4/).
