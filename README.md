@@ -12,7 +12,7 @@ The TouchEngine plugin is referenced using a git submodule, clone using
 
 `git clone --recurse gitURL`
 
-When pulling updates, don't forget to do git submodule update to get the latest TouchEngine Plugin version.
+When pulling updates, don't forget to do a submodule update to get the latest TouchEngine-UE4 Plugin version using
 
 `git submodule update`
 
