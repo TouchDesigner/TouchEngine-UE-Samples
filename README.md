@@ -2,7 +2,7 @@
 
 **Current Unreal Engine version:** `4.26.2`
 
-**Current TouchEngine version:** `2021.12380`
+**Current TouchEngine version:** `2021.14010` ([download link](https://www.dropbox.com/s/s51094yygmzm5du/TouchDesigner.2021.14010.exe?dl=0))
 
 The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, TOP input/output and DAT input/output.
 
@@ -42,7 +42,7 @@ Follow the steps below to build from Visual Studio:
 
 ### Use release version
 
-1. Go to the [release page](https://github.com/mbechard/TouchEngine-UE4/releases) and download the latest release zip file.
+1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE4/releases) and download the latest release zip file.
 2. Unzip the downloaded file in `Plugins/`.
 3. A folder named TouchEngine-UE4 should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
 4. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.2+
@@ -97,4 +97,4 @@ TouchEngine only works with DX11 renderer so far. Although DX12 is partially imp
 
 ## TouchEngine Plugin documentation
 
-This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow [this link](https://github.com/mbechard/TouchEngine-UE4/).
+This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow [this link](https://github.com/TouchDesigner/TouchEngine-UE4/).
