@@ -417,9 +417,14 @@ This example relies heavily on the details panel.
 
 When shooting the button, the Send parameter (Pulse type) is briefly set to 1 and the .tox file loaded in the TouchEngine Component will do the work based on all the other parameters of the details panel.
 
-The blueprint is reading the DAT output using Get TouchEngine Output (o/dat_sortedDescScore) and calling the Set Score Text blueprint function.
+The blueprint is reading the DAT output using Get TouchEngine Output (o/dat_sortedDescScore) where a DAT object is returned, before calling the Set Score Text blueprint function.
 
-![TOX](ReadmePictures/10_SimpleScoring_03.png?raw=true "SimpleScoring Set Score Text function in Unreal Engine blueprint.")
+![TOX](ReadmePictures/10_SimpleScoring_03.png?raw=true "SimpleScoring event graph in Unreal Engine blueprint.")
+
+Using the DAT object, Set Score Text blueprint is looping over rows and columns using the Get Cell plugin method to recreate the DAT as text objects within Unreal Engine.
+
+![TOX](ReadmePictures/10_SimpleScoring_04.png?raw=true "SimpleScoring Set Score Text function in Unreal Engine blueprint.")
+
 
 <!-- ## 00 TEMPLATE NAME
 

@@ -1,8 +1,8 @@
-# UE TouchEngine Plugin Samples Repository
+# TouchEngine-UE4 Plugin Samples Repository
 
 **Current Unreal Engine version:** `4.26.2`
 
-**Current TouchEngine version:** `2021.12380`
+**Current TouchEngine version:** `2021.14010` ([download link](https://www.dropbox.com/s/s51094yygmzm5du/TouchDesigner.2021.14010.exe?dl=0))
 
 The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, TOP input/output and DAT input/output.
 
@@ -12,7 +12,7 @@ The TouchEngine plugin is referenced using a git submodule, clone using
 
 `git clone --recurse gitURL`
 
-When pulling updates, don't forget to do git submodule update to get the latest TouchEngine Plugin version.
+When pulling updates, don't forget to do a submodule update to get the latest TouchEngine-UE4 Plugin version using
 
 `git submodule update`
 
@@ -29,6 +29,12 @@ You can execute a .bat file with the following script
 call "[UE4 Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin=[Example Project Install Location]\Plugins\TouchEngine-UE4\TouchEngine.uplugin -Package=[Build Destination Location]\TouchEnigne-UE4 -Rocket
 ```
 
+Where
+
+- `UE4 Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_4.26/` if you are using default locations.
+- `Example Project Install Location` is the path to the local copy of this repository on your computer.
+- `Build Destination Location` is the path to the folder where the compiled binaries will be moved.
+
 #### Using Visual Studio
 
 Follow the steps below to build from Visual Studio:
@@ -42,7 +48,7 @@ Follow the steps below to build from Visual Studio:
 
 ### Use release version
 
-1. Go to the [release page](https://github.com/mbechard/TouchEngine-UE4/releases) and download the latest release zip file.
+1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE4/releases) and download the latest release zip file.
 2. Unzip the downloaded file in `Plugins/`.
 3. A folder named TouchEngine-UE4 should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
 4. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.2+
@@ -93,8 +99,6 @@ When Unreal is started and the TouchEngine plugin is loaded, it is normal to occ
 
 ## Known issues and current limitations
 
-TouchEngine only works with DX11 renderer so far. Although DX12 is partially implemented as well.
+## TouchEngine-UE4 Plugin documentation
 
-## TouchEngine Plugin documentation
-
-This repository is covering the sample project and examples, for a complete documentation of the TouchEngine, follow [this link](https://github.com/mbechard/TouchEngine-UE4/).
+This repository is covering the sample project and examples, for a complete documentation of the TouchEngine-UE4 Plugin, follow [this link](https://github.com/TouchDesigner/TouchEngine-UE4/).
