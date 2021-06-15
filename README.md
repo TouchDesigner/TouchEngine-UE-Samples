@@ -22,6 +22,8 @@ When pulling updates, don't forget to do a submodule update to get the latest To
 
 On your first use of the project, or if you just pulled changes from the repository, you might be required  to recompile the plugin binaries for your own hardware.
 
+There is two ways you can get started compiling the latest source files, using a **batch script** OR using **Visual Studio**:
+
 #### Using batch script
 
 You can execute a .bat file with the following script
@@ -98,6 +100,8 @@ If you don't use Visual Studio, delete the binaries from `Plugins\TouchEngine-UE
 When Unreal is started and the TouchEngine plugin is loaded, it is normal to occasionally see instances of TouchEngine appear in your task manager even if you didn't hit Play in your Unreal Engine project. If a crash occurs, it can happen that some TouchEngine processes are still running, in which case you should terminate them.
 
 ## Known issues and current limitations
+
+- When selecting one of the existing blueprints in the world editor, on the right hand side, you will see the world outliner and the details panel. It appears that tweaking the properties of the component section of the Actor (Blueprint) is causing issues and is coming with a performance cost, while selecting the TouchEngine Component directly from the world outliner, children of the said Actor, and tweaking its properties doesn't have the same impact. 
 
 ## TouchEngine-UE4 Plugin documentation
 
