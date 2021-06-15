@@ -1,6 +1,6 @@
 # Example files documentation
 
-All .tox files can be found in `TDToxFiles`.
+All .tox files can be found in `Content\TDToxFiles` from the root folder of this repository.
 
 ## A word about blueprints and UE project file
 
@@ -83,7 +83,7 @@ This simple example showcases how to stream a texture from TouchEngine and apply
 - chop_rgbBrightness
 - top_textureIn
 
-In this example, the first input chop_rgbBrightness is not used. It is here to showcase that a .tox can be loaded multiple times in different engines. You will see it being used in the Simple RGB Light example.
+In this example, the first input chop_rgbBrightness is not used. It is here to showcase that a .tox can be loaded multiple times in different engines. You will see it also being used in the Simple RGB Light example.
 
 The second input can be used from within Unreal Engine to replace the jellybeans default texture by an Unreal Engine texture. It will then be displaced like in the default TouchDesigner project.
 
@@ -98,7 +98,7 @@ Self explanatory. See comments of previous sections.
 
 This example is getting a texture out of the TouchEngine and applying it to a cube, using the nodes Get TouchEngine Output (to get the TOP out of the TouchEngine) and Set Texture Parameter Value to set the texture on the cube.
 
-The main difference here is that you can also pass a texture from Unreal Engine to TouchEngine, using Set TouchEngine Input. Any texture passed using this node will be used just like any COMP TOP input in TouchEngine.
+The main difference here is that you can also pass a texture from Unreal Engine to TouchEngine, using Set TouchEngine Input. Any texture passed using this node will be used just like a standard TOP input on a Component in TouchEngine.
 
 You can do anything you wish with it from within the TouchEngine process / .tox file, and output it again back to Unreal Engine.
 
@@ -106,7 +106,7 @@ You can do anything you wish with it from within the TouchEngine process / .tox 
 
 ### A word about texture type, depth and limitations
 
-When importing textures (assets) in Unreal Engine, there is high chances that the default type automatically set by UE will not be compatible with TouchEngine. You'll want to make sur your asset is in VectorDisplacementmap mode (RGBA8, 8bits) or HDR mode (RGB, no sRGB, 32bits). Uncompressed textures should all work. Please open an issue on Github and share your texture file in a .zip if you encounter issues with a specific file.
+When importing textures (assets) in Unreal Engine, there is high chances that the default type automatically set by UE will not be compatible with TouchEngine. You'll want to make sure your asset is in VectorDisplacementmap mode (RGBA8, 8bits) or HDR mode (RGB, no sRGB, 32bits). Uncompressed textures should all work. Please open an issue on Github and share your texture file in a .zip if you encounter issues with a specific file.
 
 Accessing a TouchEngine Component TOP output should always work and be converted to the appropriate texture type in the Unreal blueprint.
 
@@ -213,11 +213,11 @@ Self explanatory. See comments of previous sections.
 
 ### Blueprint, UE dataflow and specifics
 
-This example introduce CHOPs in UE blueprints. You can see from the screenshot below or directly in the blueprint event graph that Get TouchEngine Output will pass to the blueprint a CHOP object. In this case, the 1024 channels of 1 sample each are used to drive the distance between the center of our "shape" and all the satellites.
+This example introduces CHOPs in UE blueprints. You can see from the screenshot below or directly in the blueprint event graph that Get TouchEngine Output will pass to the blueprint a CHOP object. In this case, the 1024 channels of 1 sample each are used to drive the distance between the center of our "shape" and all the satellites.
 
 ![TOX](ReadmePictures/05_SingleSampleChannels_02.png?raw=true "Introducing CHOP objects in UE blueprints.")
 
-Lastly, the gathered data is being passed to BP_OrbiterCubes and its Set Satellite Distances function where instances are being created and transforms set. The approach is identical in example 06, 07 and 09. 09 Will be updated at a later date to use 32bits texture data.
+Lastly, the gathered data is being passed to BP_OrbiterCubes and its Set Satellite Distances function where instances are being created and transforms set. The approach is identical in example 06, 07 and 09. 09 Will be updated at a later date to use 32-bit texture data.
 
 ## 06 PulseGenerateRandomPositions
 
@@ -282,13 +282,13 @@ None
 In this example, the chop_currentPathPosition is the only output being used by default. It is used to drive the position of one sphere along a path. You can use chop_pathData by using the same technique showcased in example 05.
 
 ### .tox file
-The Resolution parameter is used to specify the length of multiple pattern CHOPs which will make up a path for a sphere to follow. When pulsing the Generate Par, a new seed is generated and saved from noise2 to be passed to the Pattern CHOPs as number of cycles. Finally, an LFO set as Ramp will scrub (with a lookup CHOP) the generated path over time.
+The Resolution parameter is used to specify the length of multiple Pattern CHOPs which will make up a path for a sphere to follow. When pulsing the Generate Par, a new seed is generated and saved from noise2 to be passed to the Pattern CHOPs as number of cycles. Finally, an LFO set as Ramp will scrub (with a Lookup CHOP) the generated path over time.
 
 ### Blueprint, UE dataflow and specifics
 
 Similar to the two previous examples.
 
-## 02bis RGB Light
+## 02 SimpleTexture - RGB Light
 
 Tox path and name: `Content\TDToxFiles\UESample02_SimpleTexture.tox`
 
@@ -373,7 +373,7 @@ See pointGenerator wiki documentation for details. The .tox file is really just 
 
 ### Blueprint, UE dataflow and specifics
 
-Currently, the approach is similar to example 07. The difference is in the amount of parameters being used, fetched from and being passed back to the TouchEngine. 09 Will be updated at a later date to use 32bits texture data.
+Currently, the approach is similar to example 07. The difference is in the amount of parameters being used, fetched from and being passed back to the TouchEngine. 09 Will be updated at a later date to use 32-bit texture data.
 
 ![TOX](ReadmePictures/09_PointGenerator_02.png?raw=true "Get CHOP before preparing data, passing data to satellites.")
 
