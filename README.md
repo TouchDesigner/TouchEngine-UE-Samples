@@ -79,7 +79,7 @@ If errors occur the Message Log window should pop up automatically. However if i
 
 ### The Unreal related options are missing from the context menu when right clicking the Unreal project file, what should I do ?
 
-This seems to be an install bug, we encountered it on our end as well. With luck, the Epic Games Launcher will shop up with a message mentioning to "Fix the project files", clicking "Fix now" should solve the issue. If the message doesn't show up, another solution is to open your project using right click -> Open with... and open the project with the `UnrealVersionSelector.exe` located in your Epic Games Launcher install folder (by default, `C:\Program Files (x86)\Epic Games\Launcher\Engine\Binaries\Win64`)
+This seems to be an install bug, we encountered it on our end as well. With luck, the Epic Games Launcher will show up with a message mentioning to "Fix the project files", clicking "Fix now" should solve the issue. If the message doesn't show up, another solution is to open your project using right click -> Open with... and open the project with the `UnrealVersionSelector.exe` located in your Epic Games Launcher install folder (by default, `C:\Program Files (x86)\Epic Games\Launcher\Engine\Binaries\Win64`)
 
 ### I am getting an error mentioning map/lighting, what should I do ?
 
