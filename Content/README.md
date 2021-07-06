@@ -217,7 +217,7 @@ This example introduce CHOPs in UE blueprints. You can see from the screenshot b
 
 ![TOX](ReadmePictures/05_SingleSampleChannels_02.png?raw=true "Introducing CHOP objects in UE blueprints.")
 
-Lastly, the gathered data is being passed to BP_OrbiterCubes and its Set Satellite Distances function where instances are being created and transforms set. The approach is identical in example 06, 07 and 09. 09 Will be updated at a later date to use 32bits texture data.
+Lastly, the gathered data is being passed to BP_OrbiterCubes and its Set Satellite Distances function where instances are being created and transforms set. The approach is identical in example 06, 07 and 09.
 
 ## 06 PulseGenerateRandomPositions
 
@@ -373,7 +373,7 @@ See pointGenerator wiki documentation for details. The .tox file is really just 
 
 ### Blueprint, UE dataflow and specifics
 
-Currently, the approach is similar to example 07. The difference is in the amount of parameters being used, fetched from and being passed back to the TouchEngine. 09 Will be updated at a later date to use 32bits texture data.
+Currently, the approach is similar to example 07. The difference is in the amount of parameters being used, fetched from and being passed back to the TouchEngine.
 
 ![TOX](ReadmePictures/09_PointGenerator_02.png?raw=true "Get CHOP before preparing data, passing data to satellites.")
 
