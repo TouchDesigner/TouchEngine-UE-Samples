@@ -44,9 +44,14 @@ Follow the steps below to build from Visual Studio:
 1. Right click `TouchEngineUE4Samp.uproject`
 2. Select Generate `Visual Studio project files` ![Generate VS project files](ReadmePictures/ueSamples01.png?raw=true "Generate VS project files")
 3. Launch the Visual Studio Solution `TouchEngineUE4Samp.sln` in Visual Studio 2019
-4. In Visual Studio, right click the solution and click on `Rebuild solution` ![Rebuild solution](ReadmePictures/ueSamples02.png?raw=true "Rebuild solution")
-5. It could take a few minutes. Grab a cup of coffee.
-6. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.2+
+4. In Visual Studio, right click the project `TouchEngineUE4Samp` and `Set as startup project`, it should appear in **Bold**.
+![Set startup project](ReadmePictures/ueSamples_startup.png?raw=true "Set startup project")
+5. At the top of Visual Studio, you should see two drop down menus, set the configuration to `Development Editor` and the target platform to be `Win64`.
+![Set configuration](ReadmePictures/ueSamples_configuration.png?raw=true "Set configuration")
+6. In Visual Studio, right click the solution and click on `Rebuild solution`.
+![Rebuild solution](ReadmePictures/ueSamples02.png?raw=true "Rebuild solution")
+7. It could take a few minutes. Grab a cup of coffee.
+8. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.2+
 
 ### Use release version
 
