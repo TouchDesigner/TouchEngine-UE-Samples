@@ -1,8 +1,8 @@
 # TouchEngine-UE4 Plugin Samples Repository
 
-**Current Unreal Engine version:** `4.26.2`
+**Current Unreal Engine version:** `4.27.1`
 
-**Current TouchEngine version:** `2021.14360` (Latest official, [download link](https://derivative.ca/download))
+**Current TouchEngine version:** `2021.15800` (Latest official, [download link](https://derivative.ca/download))
 
 The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, TOP input/output and DAT input/output.
 
@@ -33,7 +33,7 @@ call "[UE4 Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Pl
 
 Where
 
-- `UE4 Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_4.26/` if you are using default locations.
+- `UE4 Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_4.27/` if you are using default locations.
 - `Example Project Install Location` is the path to the local copy of this repository on your computer.
 - `Build Destination Location` is the path to the folder where the compiled binaries will be moved.
 
@@ -51,14 +51,14 @@ Follow the steps below to build from Visual Studio:
 6. In Visual Studio, right click the solution and click on `Rebuild solution`.
 ![Rebuild solution](ReadmePictures/ueSamples02.png?raw=true "Rebuild solution")
 7. It could take a few minutes. Grab a cup of coffee.
-8. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.2+
+8. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.27.1+
 
 ### Use release version
 
 1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE4/releases) and download the latest release zip file.
 2. Unzip the downloaded file in `Plugins/`.
 3. A folder named TouchEngine-UE4 should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
-4. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.26.2+
+4. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.27.1+
 
 ## Examples
 
