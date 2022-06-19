@@ -1,8 +1,8 @@
-# TouchEngine-UE4 Plugin Samples Repository
+# TouchEngine-UE Plugin Samples Repository
 
-**Current Unreal Engine version:** `4.27.2`
+**Current Unreal Engine version:** `5.0.2`
 
-**Current TouchEngine version:** `2021.16410` (Latest official, [download link](https://derivative.ca/download))
+**Current TouchEngine version:** `2022.25370` (Latest official, [download link](https://derivative.ca/download))
 
 The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, TOP input/output and DAT input/output.
 
@@ -28,12 +28,12 @@ There is two ways you can get started compiling the latest source files, using a
 
 You can execute a .bat file with the following script
 ```
-call "[UE4 Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin=[Example Project Install Location]\Plugins\TouchEngine-UE4\TouchEngine.uplugin -Package=[Build Destination Location]\TouchEnigne-UE4 -Rocket
+call "[UE Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin=[Example Project Install Location]\Plugins\TouchEngine-UE4\TouchEngine.uplugin -Package=[Build Destination Location]\TouchEnigne-UE4 -Rocket
 ```
 
 Where
 
-- `UE4 Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_4.27/` if you are using default locations.
+- `UE Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_5.0/` if you are using default locations.
 - `Example Project Install Location` is the path to the local copy of this repository on your computer.
 - `Build Destination Location` is the path to the folder where the compiled binaries will be moved.
 
@@ -41,24 +41,24 @@ Where
 
 Follow the steps below to build from Visual Studio:
 
-1. Right click `TouchEngineUE4Samp.uproject`
+1. Right click `TouchEngineUESamp.uproject`
 2. Select Generate `Visual Studio project files` ![Generate VS project files](ReadmePictures/ueSamples01.png?raw=true "Generate VS project files")
-3. Launch the Visual Studio Solution `TouchEngineUE4Samp.sln` in Visual Studio 2019
-4. In Visual Studio, right click the project `TouchEngineUE4Samp` and `Set as startup project`, it should appear in **Bold**.
+3. Launch the Visual Studio Solution `TouchEngineUESamp.sln` in Visual Studio 2019
+4. In Visual Studio, right click the project `TouchEngineUESamp` and `Set as startup project`, it should appear in **Bold**.
 ![Set startup project](ReadmePictures/ueSamples_startup.png?raw=true "Set startup project")
 5. At the top of Visual Studio, you should see two drop down menus, set the configuration to `Development Editor` and the target platform to be `Win64`.
 ![Set configuration](ReadmePictures/ueSamples_configuration.png?raw=true "Set configuration")
 6. In Visual Studio, right click the solution and click on `Rebuild solution`.
 ![Rebuild solution](ReadmePictures/ueSamples02.png?raw=true "Rebuild solution")
 7. It could take a few minutes. Grab a cup of coffee.
-8. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.27.1+
+8. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.2+
 
 ### Use release version
 
 1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE4/releases) and download the latest release zip file.
 2. Unzip the downloaded file in `Plugins/`.
 3. A folder named TouchEngine-UE4 should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
-4. Launch `TouchEngineUE4Samp.uproject` in Unreal Engine 4.27.1+
+4. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.2+
 
 ## Examples
 
