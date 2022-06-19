@@ -10,7 +10,7 @@ The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, 
 
 The TouchEngine plugin is referenced using a git submodule, clone using 
 
-`git clone --recurse gitURL`
+`git clone -b 5.0 --single-branch --recurse gitURL`
 
 When pulling updates, don't forget to do a submodule update to get the latest TouchEngine-UE4 Plugin version using
 
