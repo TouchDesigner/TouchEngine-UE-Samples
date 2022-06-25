@@ -12,7 +12,7 @@ The TouchEngine plugin is referenced using a git submodule, clone using
 
 `git clone -b 5.0 --single-branch --recurse gitURL`
 
-When pulling updates, don't forget to do a submodule update to get the latest TouchEngine-UE4 Plugin version using
+When pulling updates, don't forget to do a submodule update to get the latest TouchEngine-UE Plugin version using
 
 `git submodule update`
 
@@ -28,7 +28,7 @@ There is two ways you can get started compiling the latest source files, using a
 
 You can execute a .bat file with the following script
 ```
-call "[UE Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin=[Example Project Install Location]\Plugins\TouchEngine-UE4\TouchEngine.uplugin -Package=[Build Destination Location]\TouchEnigne-UE4 -Rocket
+call "[UE Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin=[Example Project Install Location]\Plugins\TouchEngine-UE\TouchEngine.uplugin -Package=[Build Destination Location]\TouchEnigne-UE -Rocket
 ```
 
 Where
@@ -55,9 +55,9 @@ Follow the steps below to build from Visual Studio:
 
 ### Use release version
 
-1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE4/releases) and download the latest release zip file.
+1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE/releases) and download the latest release zip file.
 2. Unzip the downloaded file in `Plugins/`.
-3. A folder named TouchEngine-UE4 should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
+3. A folder named TouchEngine-UE should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
 4. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.2+
 
 ## Examples
@@ -98,7 +98,7 @@ It can take about 5 seconds (subject to change based on hardware) for the subpro
 
 If you had compiled the plugin manually, chances are that it is now using an older version of the plugin while they are potentially new features in the Unreal Engine project. You can either grab the latest plugin version on our release page in the plugin repository, or re-compile manually the plugin.
 
-If you don't use Visual Studio, delete the binaries from `Plugins\TouchEngine-UE4\Binaries\Win64` and Unreal Engine should re-compile the plugin for you at startup.
+If you don't use Visual Studio, delete the binaries from `Plugins\TouchEngine-UE\Binaries\Win64` and Unreal Engine should re-compile the plugin for you at startup.
 
 ### I see multiple TouchEngine.exe processes in my task manager while nothing is running, what should I do ?
 
@@ -108,6 +108,6 @@ When Unreal is started and the TouchEngine plugin is loaded, it is normal to occ
 
 - When selecting one of the existing blueprints in the world editor, on the right hand side, you will see the world outliner and the details panel. It appears that tweaking the properties of the component section of the Actor (Blueprint) is causing issues and is coming with a performance cost, while selecting the TouchEngine Component directly from the world outliner, children of the said Actor, and tweaking its properties doesn't have the same impact. 
 
-## TouchEngine-UE4 Plugin documentation
+## TouchEngine-UE Plugin documentation
 
-This repository is covering the sample project and examples, for a complete documentation of the TouchEngine-UE4 Plugin, follow [this link](https://github.com/TouchDesigner/TouchEngine-UE4/).
+This repository is covering the sample project and examples, for a complete documentation of the TouchEngine-UE Plugin, follow [this link](https://github.com/TouchDesigner/TouchEngine-UE/).
