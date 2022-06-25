@@ -77,3 +77,4 @@ DerivedDataCache/*
 
 # Ignore shortcuts
 *.lnk
+**/RiderLink
