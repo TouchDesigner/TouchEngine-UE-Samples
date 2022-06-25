@@ -1,4 +1,4 @@
-[submodule "Plugins/TouchEngine-UE4"]
+[submodule "Plugins/TouchEngine-UE"]
 	path = Plugins/TouchEngine-UE
 	url = git@github.com:TouchDesigner/TouchEngine-UE.git
 	branch = 5.0
