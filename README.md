@@ -1,6 +1,6 @@
 # TouchEngine-UE Plugin Samples Repository
 
-**Current Unreal Engine version:** `5.0.2`
+**Current Unreal Engine version:** `5.0.3`
 
 **Current TouchEngine version:** `2022.25370` (Latest official, [download link](https://derivative.ca/download))
 
@@ -10,7 +10,7 @@ The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, 
 
 The TouchEngine plugin is referenced using a git submodule, clone using 
 
-`git clone -b 5.0 --single-branch --recurse gitURL`
+`git clone --branch 5.0 --recurse gitURL`
 
 When pulling updates, don't forget to do a submodule update to get the latest TouchEngine-UE Plugin version using
 
@@ -43,7 +43,7 @@ Follow the steps below to build from Visual Studio:
 
 1. Right click `TouchEngineUESamp.uproject`
 2. Select Generate `Visual Studio project files` ![Generate VS project files](ReadmePictures/ueSamples01.png?raw=true "Generate VS project files")
-3. Launch the Visual Studio Solution `TouchEngineUESamp.sln` in Visual Studio 2019
+3. Launch the Visual Studio Solution `TouchEngineUESamp.sln` in Visual Studio 2022
 4. In Visual Studio, right click the project `TouchEngineUESamp` and `Set as startup project`, it should appear in **Bold**.
 ![Set startup project](ReadmePictures/ueSamples_startup.png?raw=true "Set startup project")
 5. At the top of Visual Studio, you should see two drop down menus, set the configuration to `Development Editor` and the target platform to be `Win64`.
@@ -51,14 +51,14 @@ Follow the steps below to build from Visual Studio:
 6. In Visual Studio, right click the solution and click on `Rebuild solution`.
 ![Rebuild solution](ReadmePictures/ueSamples02.png?raw=true "Rebuild solution")
 7. It could take a few minutes. Grab a cup of coffee.
-8. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.2+
+8. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.3+
 
 ### Use release version
 
 1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE/releases) and download the latest release zip file.
 2. Unzip the downloaded file in `Plugins/`.
 3. A folder named TouchEngine-UE should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
-4. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.2+
+4. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.3+
 
 ## Examples
 
