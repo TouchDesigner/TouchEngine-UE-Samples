@@ -10,9 +10,9 @@ The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, 
 
 The TouchEngine plugin is referenced using a git submodule, clone using 
 
-`git clone --branch UE5.0-Rel --recurse https://github.com/TouchDesigner/TouchEngine-UE-Samples.git`
+`git clone --branch UE5.0-Release --recurse https://github.com/TouchDesigner/TouchEngine-UE-Samples.git`
 
-Where `UE5.0-Rel` can be replaced by a branch you wish to clone and checkout, if different than the main release branch.
+Where `UE5.0-Release` can be replaced by a branch you wish to clone and checkout, if different than the main release branch.
 
 Where `https://github.com/TouchDesigner/TouchEngine-UE-Samples.git` can be replaced by the SSH URL.
 
