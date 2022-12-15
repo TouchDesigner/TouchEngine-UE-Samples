@@ -1,8 +1,6 @@
 # TouchEngine-UE Plugin Samples Repository
 
-**Current Unreal Engine version:** `5.0.3`
-
-**Current TouchEngine version:** `2022.25370` (Latest official, [download link](https://derivative.ca/download))
+**Current Unreal Engine version:** `5.1.0`
 
 The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, TOP input/output and DAT input/output.
 
@@ -10,7 +8,11 @@ The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, 
 
 The TouchEngine plugin is referenced using a git submodule, clone using 
 
-`git clone --branch 5.0 --recurse gitURL`
+`git clone --branch UE5.1-Release --recurse https://github.com/TouchDesigner/TouchEngine-UE-Samples.git`
+
+Where `UE5.1-Release` can be replaced by a branch you wish to clone and checkout, if different than the main release branch.
+
+Where `https://github.com/TouchDesigner/TouchEngine-UE-Samples.git` can be replaced by the SSH URL.
 
 When pulling updates, don't forget to do a submodule update to get the latest TouchEngine-UE Plugin version using
 
@@ -33,7 +35,7 @@ call "[UE Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plu
 
 Where
 
-- `UE Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_5.0/` if you are using default locations.
+- `UE Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_5.1/` if you are using default locations.
 - `Example Project Install Location` is the path to the local copy of this repository on your computer.
 - `Build Destination Location` is the path to the folder where the compiled binaries will be moved.
 
@@ -51,14 +53,16 @@ Follow the steps below to build from Visual Studio:
 6. In Visual Studio, right click the solution and click on `Rebuild solution`.
 ![Rebuild solution](ReadmePictures/ueSamples02.png?raw=true "Rebuild solution")
 7. It could take a few minutes. Grab a cup of coffee.
-8. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.3+
+8. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.1.0+
 
 ### Use release version
 
+After cloning or downloading the archive of this repository, unzip and go to its root.
+
 1. Go to the [release page](https://github.com/TouchDesigner/TouchEngine-UE/releases) and download the latest release zip file.
-2. Unzip the downloaded file in `Plugins/`.
-3. A folder named TouchEngine-UE should now be here with the following structure. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
-4. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.0.3+
+2. In the TouchEngine-UE Samples folder, unzip the downloaded file in `Plugins/`.
+3. A folder named TouchEngine-UE should now be here with a structure similar to the one in the following screenshot. ![Plugin folder structure](ReadmePictures/ueSamples03.png?raw=true "Plugin folder structure")
+4. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.1.0+
 
 ## Examples
 
@@ -92,7 +96,7 @@ Rebuild the map/lighting to fix the error that comes up when loading the project
 
 ### The examples seem to load forever, what should I do ?
 
-It can take about 5 seconds (subject to change based on hardware) for the subprocess to boot and TouchEngine to load the .tox within Unreal Engine.
+It can take about 5-10 seconds (subject to change based on hardware) for the subprocess to boot and TouchEngine to load the .tox within Unreal Engine.
 
 ### I just pulled the git repository and got some updates, my project is now starting with a lot of errors, what should I do ?
 
@@ -103,6 +107,14 @@ If you don't use Visual Studio, delete the binaries from `Plugins\TouchEngine-UE
 ### I see multiple TouchEngine.exe processes in my task manager while nothing is running, what should I do ?
 
 When Unreal is started and the TouchEngine plugin is loaded, it is normal to occasionally see instances of TouchEngine appear in your task manager even if you didn't hit Play in your Unreal Engine project. If a crash occurs, it can happen that some TouchEngine processes are still running, in which case you should terminate them.
+
+### I can't run the project, it doesn't want to build, what should I do ?
+
+Remember that you are now working in a game engine and that they are prerequisites to game development being applied. In most cases, you will need all the tools required for an Unreal project to compile, with specific versions. 
+
+Unreal usually points which version and which tool you are missing. Those should includes (and are not limited to): Visual Studio Build Tools 2022, .Net Framework, .Net Core Runtime... etc. 
+
+The most common one that users might be missing are the Visual Studio Build Tools, available here: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022
 
 ## Known issues and current limitations
 
