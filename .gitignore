@@ -1,5 +1,6 @@
 # Visual Studio and Rider user specific files
 .vs/
+.vsconfig
 .idea/
 **/RiderLink
 
