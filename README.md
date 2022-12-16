@@ -118,7 +118,7 @@ The most common one that users might be missing are the Visual Studio Build Tool
 
 ## Known issues and current limitations
 
-- When selecting one of the existing blueprints in the world editor, on the right hand side, you will see the world outliner and the details panel. It appears that tweaking the properties of the component section of the Actor (Blueprint) is causing issues and is coming with a performance cost, while selecting the TouchEngine Component directly from the world outliner, children of the said Actor, and tweaking its properties doesn't have the same impact. 
+See release page for known issues on latest releases.
 
 ## TouchEngine-UE Plugin documentation
 
