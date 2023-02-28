@@ -79,6 +79,10 @@
 		{
 			"Name": "Switchboard",
 			"Enabled": true
+		},
+		{
+			"Name": "TouchEngineDisplayCluster",
+			"Enabled": true
 		}
 	]
 }

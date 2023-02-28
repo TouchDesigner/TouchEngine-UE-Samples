@@ -1,3 +1,6 @@
 [submodule "Plugins/TouchEngine"]
 	path = Plugins/TouchEngine
 	url = git@github.com:TouchDesigner/TouchEngine-UE.git
+[submodule "Plugins/TouchEngineDisplayCluster"]
+	path = Plugins/TouchEngineDisplayCluster
+	url = git@github.com:Geodesic-Games/TouchEngineDisplayCluster.git
