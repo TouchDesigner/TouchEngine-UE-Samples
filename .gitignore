@@ -75,7 +75,10 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-/TDTest/Backup
 
 # Ignore shortcuts
 *.lnk
+
+*.code-workspace
+*.vs
+*.dmp
