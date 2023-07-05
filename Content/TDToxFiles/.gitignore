@@ -1,5 +1,6 @@
 # toe file backup
 workspace.*.toe
+workspaceEngine.*.toe
 Backup/
 *.uasset
 *.lnk
