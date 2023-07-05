@@ -31,3 +31,9 @@ Remember that you are now working in a game engine and that they are prerequisit
 Unreal usually points which version and which tool you are missing. Those should includes (and are not limited to): Visual Studio Build Tools 2022, .Net Framework, .Net Core Runtime... etc. 
 
 The most common one that users might be missing are the Visual Studio Build Tools, available here: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022
+
+## I package a project making use of the TouchEngine Plugin but none of my .tox assets come with it.
+
+You need to add the tox files folder to the "Additional Non-Asset Directories" the project settings. The sample project has it added already.
+
+![Additional Non-Asset Directories To Copy](assets/additional_non_assets_dir.png?raw=true "Additional Non-Asset Directories To Copy")
