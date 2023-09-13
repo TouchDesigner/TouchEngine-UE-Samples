@@ -15,5 +15,8 @@
 			"Name": "TouchEngine",
 			"Enabled": true
 		}
+	],
+	"TargetPlatforms": [
+		"Windows"
 	]
 }
