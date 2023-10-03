@@ -153,9 +153,13 @@ This example showcases a texture being sent out of a running TouchEngine to be u
 
 This example is the same as the previous sample, to the difference that is is using a different pixel format within the TouchEngine subprocess.
 
+The Material used is different to accomodate the different texture format. Our texture here is not 8bit, so the Material used is using a Linear Color sampler rather than the Color sampler used so far. 
+
 > 💡 **NOTE: A word about texture type, depth and limitations** 
 >
-> When importing textures (assets) in Unreal Engine, there is high chances that the default type automatically set by UE will not be compatible with TouchEngine. You'll want to make sure your asset is in VectorDisplacementmap mode (RGBA8, 8bits) or HDR mode (RGB, no sRGB, 32bits). Uncompressed textures should all work. Please open an issue on Github and share your texture file in a .zip if you encounter issues with a specific file.
+> ⚠️ Pay attention to the Material used in each case where textures are being passed in to TouchEngine or expecially received from TouchEngine to be used in UE. They are tweaked based on the content being passsed in / out, and the texture format.
+>
+> When importing textures (assets) in Unreal Engine, there is a chance that the default type automatically set by UE will not be compatible with TouchEngine. Please open an issue on Github and share your texture file in a .zip if you encounter issues with a specific file.
 >
 > Accessing a TouchEngine Component TOP output should always work and be converted to the appropriate texture type in the Unreal blueprint.
 
@@ -269,6 +273,8 @@ At runtime and in real-time, the user can update the parameters to have an impac
 
 The implementation is similar to the CHOP samples involving spheres / cubes.
 
+> ⚠️ This sample is using CHOP samples to place the object instances into space. While this was optimized, this is scaling poorly and will be come largely inefficient with large datasets. The Niagara samples should be looked into when considering texture sampling.
+
 ## 05 - Spring
 
 This CHOP data example is based on one of the Spring CHOP snippets available from within TouchDesigner. A trigger (Spring Trigger - Pulse Par) and various parameters related to the Spring CHOP are exposed at the top level. Additionally, an input CHOP can also be used to trigger the spring / rebound effect.
@@ -276,3 +282,12 @@ This CHOP data example is based on one of the Spring CHOP snippets available fro
 At runtime and in realtime, the user can update the parameters to have an impact on the system. 
 
 Similar to the Pulse button, this example is using one button where CHOP data is briefly set from 0 to 1 and passed to TouchEngine, while the other is setting a Pulse parameter. The effect on the visual elements is the same (it triggers the motion of the sphere).
+
+## Niagara
+### 01
+
+This sammple is showcasing how to use a 32bit TOP texture generated in TouchEngine (in this case, loading by default a .ply file) where very pixel is a position  where they are continuously rotating over time. The positions are sampled in Niagara, Unreal advanced particle system engine, and used as the base position for each particles. This is mostly a 1:1 representation of the .ply file as if it was seen as points in TouchDesigner.
+
+### 02
+
+The approach of that sample is the same as the previous sample. Instead of loading a .ply file, we are generating positions using Noise TOP, sent to Unreal as 32bit texture. Those pixels are sampled and used as positions and colors to particles in Niagara. The Niagara particle system is tweaked in comparison to the previous sample, the particles final positions are not a 1:1 match against the sampled texture. 
