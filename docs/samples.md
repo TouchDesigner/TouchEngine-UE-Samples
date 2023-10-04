@@ -139,6 +139,9 @@ This sample is similar to the previous sample, the difference is that it shows h
 This is using the same .tox file and a blueprint very similar to the previous sample, 02. It is also using a CHOP and a DAT output to show display the same parameter values as set in the TouchEngine, passed out uisng internally a Parameter CHOP and a Parameter DAT.
 
 ## TOPs
+
+> 💡 Additional informations are available in the Plugin's repository documentation. Users should head to the TouchEngine-UE repository -> docs -> how-tos -> work-with-TOPs.md
+
 ### 01 - Texture Passthrough
 
 This simple example showcases how to stream a texture from TouchEngine and apply it to an Unreal Engine material. A similar workflow is also showcased in the very first sample, "Engine Component" where we are applying the text (as texture) output of the TouchEngine component being loaded to a material.
@@ -286,7 +289,7 @@ Similar to the Pulse button, this example is using one button where CHOP data is
 ## Niagara
 ### 01
 
-This sammple is showcasing how to use a 32bit TOP texture generated in TouchEngine (in this case, loading by default a .ply file) where very pixel is a position  where they are continuously rotating over time. The positions are sampled in Niagara, Unreal advanced particle system engine, and used as the base position for each particles. This is mostly a 1:1 representation of the .ply file as if it was seen as points in TouchDesigner.
+This sample is showcasing how to use a 32bit TOP texture generated in TouchEngine (in this case, loading by default a .ply file) where very pixel is a position  where they are continuously rotating over time. The positions are sampled in Niagara, Unreal advanced particle system engine, and used as the base position for each particles. This is mostly a 1:1 representation of the .ply file as if it was seen as points in TouchDesigner.
 
 ### 02
 
