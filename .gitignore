@@ -82,3 +82,5 @@ DerivedDataCache/*
 *.code-workspace
 *.vs
 *.dmp
+
+*.toe
