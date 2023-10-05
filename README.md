@@ -1,7 +1,7 @@
 # TouchEngine For UE Plugin Samples Repository
 
 * **Current Unreal Engine version:** `5.2.1`
-* **Current TouchEngine version:** `2022.35130`
+* **Current TouchEngine version:** `2022.35284`
 * **Current Plugin version:** `1.3.0`
 
 The TouchEngine Plugin currently supports Custom Parameters, CHOP input/output, TOP input/output and DAT input/output.
