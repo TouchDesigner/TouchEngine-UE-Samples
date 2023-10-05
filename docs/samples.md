@@ -295,6 +295,9 @@ At runtime and in realtime, the user can update the parameters to have an impact
 Similar to the Pulse button, this example is using one button where CHOP data is briefly set from 0 to 1 and passed to TouchEngine, while the other is setting a Pulse parameter. The effect on the visual elements is the same (it triggers the motion of the sphere).
 
 ## Niagara
+
+> 💡 When looking at the Niagara System object, click on each module items. The ones that are tweaked or are of importance are commented on the side. The second sample is left uncomentted as it is mostly just the same as the first one, with some more processing and effects over each particles positions.
+
 ### 01
 
 This sample is showcasing how to use a 32bit TOP texture generated in TouchEngine (in this case, loading by default a .ply file) where very pixel is a position  where they are continuously rotating over time. The positions are sampled in Niagara, Unreal advanced particle system engine, and used as the base position for each particles. This is mostly a 1:1 representation of the .ply file as if it was seen as points in TouchDesigner.
