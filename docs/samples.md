@@ -166,6 +166,14 @@ The Material used is different to accomodate the different texture format. Our t
 >
 > Accessing a TouchEngine Component TOP output should always work and be converted to the appropriate texture type in the Unreal blueprint.
 
+### 03 - Render Target
+
+This sample showcase the use of a Render Target as Input to TouchEngine.
+
+In the blueprint, the SceneCaptureComponent2D is a camera and capturing frames from this POV. The frames are being written as 32bit floats RGBA to a texture render target "RT_TouchEngine" and this is being sent to TouchEngine.
+
+The texture is distorted in the running TouchEngine and outputted back into Unreal, and applied to the material of a plane.
+
 ## CHOPs
 
 > 💡 Users are invited to spend time looking at the (commented) blueprints for tips and tricks, and going through different approaches.
