@@ -30,6 +30,7 @@ call "[UE Install Location]\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plu
 Where
 
 - `UE Install Location` is the root folder of your Unreal Engine installation. It should be similar to `C:/Program Files/Epic Games/UE_5.2/` if you are using default locations.
+> ⚠️ Verify the UE install path. If you are in UE 5.2, the folder should be named `UE_5.2`.
 - `Example Project Install Location` is the path to the local copy of this repository on your computer.
 - `Build Destination Location` is the path to the folder where the compiled binaries will be moved.
 
