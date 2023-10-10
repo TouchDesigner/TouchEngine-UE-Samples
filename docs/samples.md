@@ -174,6 +174,10 @@ In the blueprint, the SceneCaptureComponent2D is a camera and capturing frames f
 
 The texture is distorted in the running TouchEngine and outputted back into Unreal, and applied to the material of a plane.
 
+### 04 - sRGB / RGB Compare
+
+This sample is meant to be used to compare textures when sent with different formats, color spaces, or applied with different materials. It's mainly useful to use multiple materials and compare pixel values for sRGB against linear textures.
+
 ## CHOPs
 
 > 💡 Users are invited to spend time looking at the (commented) blueprints for tips and tricks, and going through different approaches.
