@@ -1,6 +1,6 @@
 # toe file backup
 workspace.*.toe
 workspaceEngine.*.toe
+SpoutToNiagaraPlayground.*.toe
 Backup/
-*.uasset
 *.lnk
