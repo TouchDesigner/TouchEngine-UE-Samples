@@ -2,5 +2,4 @@
 workspace.*.toe
 workspaceEngine.*.toe
 Backup/
-*.uasset
 *.lnk
