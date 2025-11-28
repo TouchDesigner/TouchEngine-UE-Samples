@@ -8,7 +8,7 @@ public class TouchEngineUESampTarget : TargetRules
 	public TouchEngineUESampTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-		DefaultBuildSettings = BuildSettingsVersion.V5;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.Add("TouchEngineUESamp");
 	}
 }
