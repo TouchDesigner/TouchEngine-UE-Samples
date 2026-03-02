@@ -37,3 +37,15 @@ The most common one that users might be missing are the Visual Studio Build Tool
 You need to add the tox files folder to the "Additional Non-Asset Directories" the project settings. The sample project has it added already.
 
 ![Additional Non-Asset Directories To Copy](assets/additional_non_assets_dir.png?raw=true "Additional Non-Asset Directories To Copy")
+
+## Packaging the sample project takes a long time, what should I do ?
+
+If you are packaging this sample project, you can reduce packaging time by disabling targeted RHIs that are not used by the samples.
+
+In Project Settings, uncheck the following options:
+
+- `Platforms -> Windows -> D3D11 Targeted Shader Formats`
+- `Platforms -> Windows -> Vulkan Targeted Shader Formats (SM5)`
+- `Platforms -> Windows -> Vulkan Targeted Shader Formats (SM6)`
+
+This avoids compiling unnecessary shader permutations and can speed up packaging significantly.

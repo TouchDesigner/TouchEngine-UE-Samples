@@ -58,3 +58,15 @@ After cloning or downloading the archive of this repository, unzip and go to its
 2. In the TouchEngine-UE Samples folder, unzip the downloaded file in `Plugins/`.
 3. A folder named TouchEngine should now be here with a structure similar to the one in the following screenshot. ![Plugin folder structure](assets/ueSamples03.png?raw=true "Plugin folder structure")
 4. Launch `TouchEngineUESamp.uproject` in Unreal Engine 5.5.x+
+
+### Packaging the sample project faster
+
+When packaging this sample project, you can save time by disabling targeted RHIs that are not needed by the samples.
+
+In Project Settings, uncheck the following options:
+
+- `Platforms -> Windows -> D3D11 Targeted Shader Formats`
+- `Platforms -> Windows -> Vulkan Targeted Shader Formats (SM5)`
+- `Platforms -> Windows -> Vulkan Targeted Shader Formats (SM6)`
+
+This reduces unnecessary shader compilation and can noticeably shorten packaging time for the sample project.
